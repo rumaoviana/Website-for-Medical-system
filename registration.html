@@ -1,0 +1,262 @@
+
+<DOCTYPE html>
+<head>
+<title>register</title>
+<?php include 'connection.php' ?>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Food</title>
+<style type="text/css">
+
+input[type=text]:focus,input[type=email]:focus,input[type=tel]:focus,input[type=password]:focus {
+    background-color: lightblue;
+    box-sizing: border-box;
+    border: 1px solid #555;
+}
+
+.button {
+    display: inline-block;
+    background-color: #008CBA; //blue #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+     -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera *///////////
+    animation: mymove 5s infinite;////////////////////
+}
+@-webkit-keyframes mymove {
+    from {background-color: mediumblue;}/////
+    to {background-color: blue;}////////
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {background-color: mediumblue;}//////
+    to {background-color: blue;}///////
+}
+.button:hover {background-color: #40E0D0}
+
+.button1:active {
+  background-color: #40E0D0;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+ 
+}
+.button2:active {
+  background-color: #218AD0  ////40E0D0;
+  
+  transform: translateY(4px);
+ 
+}
+
+.button1 {border-radius: 50%;}
+.button2 {
+   border-radius: 12px;
+   padding: 10px 24px;
+   background-color: #82F079;
+   
+   outline: none;}
+div {
+    
+    padding: 10px;
+    border-radius: 20px;
+    width: 750px;
+    height: 750px;
+    margin: 15px;
+}
+
+
+div.first {
+    background: rgba(0, 128, 128, 0.6);
+    
+}
+
+</style>
+
+
+
+
+</style>
+
+<script type="text/javascript">
+function GEEKFORGEEKS()                                   
+{
+    var name = document.forms["RegForm"]["fname"];
+    var surname = document.forms["RegForm"]["lname"];              
+    var email = document.forms["RegForm"]["EMail"];
+    var password = document.forms["RegForm"]["psw"]; 
+    var repeatpassword = document.forms["RegForm"]["psw-repeat"];   
+    var phone = document.forms["RegForm"]["usrtel"]; 
+    var what =  document.forms["RegForm"]["dropdown"];
+    
+    var address = document.forms["RegForm"]["Address"];
+    var o = document.getElementById('m1');
+    var t = document.getElementById('f1'); 
+
+    var p = document.getElementById('8to10');
+    var q = document.getElementById('10to20');
+    var r = document.getElementById('20to30');
+    var s = document.getElementById('30to40'); 
+    var t = document.getElementById('40to50');
+    var u = document.getElementById('50to60'); 
+    var v = document.getElementById('60to70');
+    var w = document.getElementById('70to80'); 
+    var y = document.getElementById('80to90');
+    
+
+    if (name.value == "")                                 
+    {
+        window.alert("Please enter your name.");
+        name.focus();
+        return false;
+    }
+    
+    if (surname.value == "")                                 
+    {
+        window.alert("Please enter your surname.");
+        surname.focus();
+        return false;
+    }
+
+    
+      
+    if (email.value == "")                                  
+    {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+     }
+  
+    if (email.value.indexOf("@", 0) < 0)                
+    {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+  
+    if (email.value.indexOf(".", 0) < 0)                
+    {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+  
+    
+  
+    if (password.value == "")                       
+    {
+        window.alert("Please enter your password");
+        password.focus();
+        return false;
+    }
+    
+    if (repeatpassword.value == "")                       
+    {
+        window.alert("Please renter your password");
+        repeatpassword.focus();
+        return false;
+    }
+
+    if (phone.value == "")                          
+    {
+        window.alert("Please enter your telephone number.");
+        phone.focus();
+        return false;
+    }
+
+    
+    if (what.selectedIndex < 1)                 
+    {
+        alert("Please enter your place.");
+        what.focus();
+        return false;
+    }
+    
+    var a = 0, rdbtn=document.getElementsByName("gender")
+for(i=0;i<rdbtn.length;i++) {
+if(rdbtn.item(i).checked == false) {
+a++;
+}
+}
+if(a == rdbtn.length) {
+alert("Please select your gender");
+
+return false;
+} else {
+document.getElementById("gen").style.border = "";
+
+}
+
+    var b = 0, rdbtn=document.getElementsByName("agegroup")
+for(j=0;j<rdbtn.length;j++) {
+if(rdbtn.item(j).checked == false) {
+a++;
+}
+}
+if(b == rdbtn.length) {
+alert("Please select your agegroup");
+
+return false;
+} else {
+document.getElementById("age").style.border = "";
+
+}
+
+
+
+    var b = 0, chk=document.getElementsByName("option2")
+    for(k=0;k<chk.length;k++) {
+    if(chk.item(k).checked == false) {
+    b++;
+    }
+}
+    if(b == chk.length) {
+    alert("Please agree with the terms and conditions to proceed");
+
+    return false;
+    } else {
+    document.getElementById("agr").style.border = "";
+}
+
+    return true;
+ }   
+</script>
+</head>
+
+
+
+
+ <marquee style="z-index:2;width:1600px;height:50px;font-family:Cursive;font-size:25pt;color:#fefbd8;hspace:10px;behavior:alternate;" direction="right">
+REGISTRATION   FORM
+</marquee>
+<center>
+<form name="RegForm" action="php/insert.php" onsubmit="return GEEKFORGEEKS()" method="POST">
+<div class="first"><b></p>
+
+
+<b>First name</b> : <input type="text" size="50" maxlength="50" name="fname"><br><br>
+<b>Last name</b>  : <input type="text" size="51" maxlength="50" name="lname"><br><br>
+<b>Your e-mail</b> : <input type="email" size="50" maxlength="50"  name="EMail"><br><br>
+<b>Password</b> : <input type="password" size="52" maxlength="50" placeholder="Atleast 2 letters" name="psw"><br><br>
+<b>Telephone</b> : <input type="tel" size="52" maxlength="50" name="usrtel"><br><br> 
+<b>Additional Health Problems:</b> : <textarea rows="5" cols="55" wrap="physical" name="comments"></textarea><br><br>
+<input type="checkbox" name="option2" id="nnn" value="nn">I agree with the terms and policies<br><br>
+<button type="reset" class="button2" name="reset" value="RESET" onclick="return confirmit()">RESET</button>
+<button type="submit" class="button button1" name="submit" ><b>REGISTER</b></button><br><br><br><br><br><br><br>
+
+</form>
+
+</p>
+</b>
+</div>
+</center>
+</body>
+</html>

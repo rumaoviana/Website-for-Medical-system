@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Health is a state of complete harmony of the body,mind and spirit.</title>
+  <link rel="stylesheet"  type="text/css" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="symptoms1 clearfix">
+         <img src="Images\lo.png" class="logo">
+         <ul class="main-nav animated slideInDown" id="class-check">
+           <li><a href="Heart.html">HEART DISEASES</a></li>
+           <li><a href="Stomach.html">STOMACH PROBLEMS</a></li>
+           <li><a href="Lung.html">LUNG PROBLEMS</a></li>
+           <li><a href="Bacterial.html">BACTERIAL INFECTION</a></li>
+           </ul>
+           <a href="#" class="mobile-icon" onclick="slideshow()"> <i class="fa fa-bars"></i></a>
+         </div>
+</nav>
+<div class="main-content-symptoms">
+<h1 class="animate__animated animate__bounce">PLEASE HELP US SO THAT WE CAN HELP YOU.<br><span class="colorchange"></span></h1>
+<h2>Kindly select your health disease to have the symptoms listed.</h2>
+<p>Click on the below listed health problems</p>
+<form action="php/fetch1.php" method="GET">
+<select id="disorder" name="disorderID">
+  <option disabled="" selected="" value="">--Select Disorder--</option>
+  <option value="1">before heart attack</option>
+  <option value="2">during heart attack</option>
+  <option value="100">heart attack</option>
+  <option value="200">stroke</option>
+  <option value="300">reproductive health problems</option>
+  <option value="400">breast problems</option>
+  <option value="500">lung problems</option>
+  <option value="600">stomach or digestive problems</option>
+  <option value="700">bladder problems</option>
+  <option value="800">skin problems</option>
+  <option value="900">muscle or joint problems</option>
+  <option value="1200">eating or weight problems</option>
+  <option value="1000">emotional problem</option>
+</select>
+  <!-- <a href="rumao.html" class="button"> submit</a> -->
+  <button type="Submit" class="button" name="submit" value="submit" onclick="return confirmit()">submit</button></a>
+  
+ 
+</form>
+</div>
+</header>
+</body>
+</html>
